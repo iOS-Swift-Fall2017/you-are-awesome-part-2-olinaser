@@ -21,15 +21,27 @@ class ViewController: UIViewController {
 
     @IBAction func messageButtonPressed(_ sender: Any) {
         
-        let messages = ["Pickles", "Greece", "Hoop", "Gyros", "Manny"]
+         let messages = ["Pickles", "Greece", "Hoop", "Gyros", "Manny"]
         
-    
+        var newIndex = -1
+        
+        repeat {
+            newIndex = Int(arc4random_uniform(UInt32(messages.count)))
+            } while index == newIndex
+        
+        index = newIndex
         messageLabel.text = messages[index]
-        index = index + 1
         
-        if index == messages.count {
-            index = 0
-        }
+//        var randomIndex =
+//            Int(arc4random_uniform(UInt32(messages.count)))
+//            messageLabel.text = messages[randomIndex]
+//
+//        messageLabel.text = messages[index]
+//        index = index + 1
+//
+//        if index == messages.count {
+//            index = 0
+//        }
         
 //        let message1 = "Pickles"
 //        let message2 = "Greece"
